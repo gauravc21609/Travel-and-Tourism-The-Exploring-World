@@ -1,0 +1,17 @@
+.card {
+  height: 20rem;
+  overflow: hidden;
+}
+
+.card img {
+  filter: brightness(80%);
+  transition: all 0.4s;
+  height: 100%;
+  width: 100%;
+}
+
+.card:hover img {
+  transform: scale(1.2);
+  filter: brightness(40%);
+}
+
