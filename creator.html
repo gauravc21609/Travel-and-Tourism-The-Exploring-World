@@ -35,7 +35,7 @@
     <!-- here is creator space -->
     <section class="creator-form">
       <h2>Create a Post</h2>
-      <form>
+      <form id="post-form-submit">
         <label for="post-title">Title:</label>
         <input type="text" id="post-title" name="post-title" required />
 
@@ -45,15 +45,6 @@
         <label for="post-location">Location:</label>
         <input type="text" id="post-location" name="post-location" required />
 
-        <label for="post-video">Video:</label>
-        <input
-          type="file"
-          id="post-video"
-          name="post-video"
-          accept="video/*"
-          required
-        />
-
         <button type="submit">Create Post</button>
       </form>
     </section>
@@ -62,5 +53,7 @@
     <footer>
       <center>&copy; 2023 Exploring the World. All rights reserved.</center>
     </footer>
+
+    <script src="./js/creator.js"></script>
   </body>
 </html>

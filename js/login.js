@@ -13,7 +13,7 @@ document.getElementById("submit-form").addEventListener("click", function (e) {
     confirmPasswd.length > 0
   ) {
     if (passwd === confirmPasswd) {
-      createUser(nm, passwd, email)
+      createUser(nm, passwd, email);
     } else {
       alert("Password doesn't match");
     }
@@ -22,28 +22,51 @@ document.getElementById("submit-form").addEventListener("click", function (e) {
   }
 });
 
-function createUser(username, password, email) {
+document
+  .getElementById("login-submit")
+  .addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    let loginEmail = document.getElementById("login-email").value;
+    let loginPasswd = document.getElementById("login-password").value;
+
+    loginUser(loginEmail, loginPasswd);
+    console.log("login here");
+  });
+
+async function createUser(username, password, email) {
   const sendData = {
     name: username,
     password: password,
     email: email,
   };
 
-  fetch("http://localhost:3000/newuser", {
+  let res = await fetch("http://localhost:3000/newuser", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(sendData),
-  })
-  .then(response => response.json())
-  .then(result => {
-    // Handle the response from the server
-    alert("Registration successful!")
-    console.log(result);
-  })
-  .catch(error => {
-    // Handle any errors that occur during the request
-    console.error(error);
   });
+
+  console.log(await res.json());
+}
+
+async function loginUser(email, password) {
+  const sendData = { email: email, password: password };
+
+  let res = await fetch(`http://localhost:3000/login`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(sendData),
+  });
+  const data = await res.json();
+  console.log(data);
+  if (data) {
+    window.location.href = "../index.html";
+  } else {
+  alert("wrong password or email");
+  }
 }
