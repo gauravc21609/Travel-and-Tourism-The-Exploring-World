@@ -2,3 +2,10 @@ User
   name
   password
   email
+
+
+ blog page dynamic fetch
+ home page book now and then to destination page
+ destination page modal
+ login update
+ 

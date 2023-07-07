@@ -14,6 +14,7 @@ app.use(bodyParser.json());
 
 const db = new sqlite3.Database("users.db");
 
+// Display all users
 app.get("/all", (req, res) => {
   db.all("SELECT * FROM user", (err, rows) => {
     if (err) {
@@ -23,7 +24,7 @@ app.get("/all", (req, res) => {
     }
   });
 });
-
+// create new user
 app.post("/newuser", (req, res) => {
   const id = Math.random() * 1000;
   const varId = id.toString();
@@ -46,6 +47,7 @@ app.post("/newuser", (req, res) => {
   );
 });
 
+// login for user
 app.post("/login", (req, res) => {
   // code here
   db.all(
@@ -66,6 +68,7 @@ app.post("/login", (req, res) => {
   );
 });
 
+// create a new blog 
 app.post("/addblog", (req, res)=>{
   console.log(req.body);
 
@@ -82,6 +85,30 @@ app.post("/addblog", (req, res)=>{
       }
     }
   );
+})
+
+// get all the blogs
+app.get("/getBlog", (req, res)=>{
+  db.all("SELECT * FROM blogs", (err, rows) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.send(rows);
+    }
+  });
+})
+
+// get single blog 
+app.get("/getSingleBlog", (req, res)=>{
+  console.log(req.query.id);
+  
+  db.all("SELECT * FROM blogs where id = ?",[req.query.id], (err, rows) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.send(rows);
+    }
+  });
 })
 
 const PORT = 3000;
