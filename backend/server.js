@@ -58,23 +58,29 @@ app.post("/login", (req, res) => {
         console.error(err);
       } else {
         console.log(rows);
-        if (rows.length > 0){
-          res.status(200).send(rows[0])
+        if (rows.length > 0) {
+          res.status(200).send(rows[0]);
         } else {
-          res.status(404).send('No detail found')
+          res.status(404).send("No detail found");
         }
       }
     }
   );
 });
 
-// create a new blog 
-app.post("/addblog", (req, res)=>{
+// create a new blog
+app.post("/addblog", (req, res) => {
   console.log(req.body);
 
   db.run(
     "INSERT INTO blogs (id, title, content, location, date) VALUES (?, ?, ?, ? , ?)",
-    [Math.random() * 1000 , req.body.title, req.body.content, req.body.location, req.body.date],
+    [
+      Math.random() * 1000,
+      req.body.title,
+      req.body.content,
+      req.body.location,
+      req.body.date,
+    ],
     function (err) {
       if (err) {
         console.error(err);
@@ -85,10 +91,10 @@ app.post("/addblog", (req, res)=>{
       }
     }
   );
-})
+});
 
 // get all the blogs
-app.get("/getBlog", (req, res)=>{
+app.get("/getBlog", (req, res) => {
   db.all("SELECT * FROM blogs", (err, rows) => {
     if (err) {
       console.log(err);
@@ -96,20 +102,53 @@ app.get("/getBlog", (req, res)=>{
       res.send(rows);
     }
   });
-})
+});
 
-// get single blog 
-app.get("/getSingleBlog", (req, res)=>{
+// get single blog
+app.get("/getSingleBlog", (req, res) => {
   console.log(req.query.id);
-  
-  db.all("SELECT * FROM blogs where id = ?",[req.query.id], (err, rows) => {
+
+  db.all("SELECT * FROM blogs where id = ?", [req.query.id], (err, rows) => {
     if (err) {
       console.log(err);
     } else {
       res.send(rows);
     }
   });
-})
+});
+
+// post reservations or bookings
+app.post("/booking", (req, res) => {
+  const id = Math.random() * 1000;
+  const varId = id.toString();
+
+  console.log(req.body);
+
+  db.run(
+    "INSERT INTO bookings (id, destination, checkInDate, travelType) VALUES (?, ?, ?, ?)",
+    [varId, req.body.destination, req.body.checkInDate, req.body.travelType],
+    function (err) {
+      if (err) {
+        console.error(err);
+        res.status(500).send("Error inserting user data");
+      } else {
+        console.log("User data inserted successfully");
+        res.status(200).send("User data inserted successfully");
+      }
+    }
+  );
+});
+
+// get all the bookings
+app.get("/getBooking", (req, res) => {
+  db.all("SELECT * FROM bookings", (err, rows) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.send(rows);
+    }
+  });
+});
 
 const PORT = 3000;
 

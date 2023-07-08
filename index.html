@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exploring the World - Home</title>
 
     <script
@@ -21,7 +23,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
-    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/default.css" />
   </head>
 
   <body>
@@ -31,7 +33,7 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="destinations.html">Destinations</a></li>
-        <li><a href="#">Reservations</a></li>
+        <li><a href="reservations.html">Reservations</a></li>
         <li class="dropdown">
           <a href="blog.html" class="dropbtn">Blog</a>
           <div class="dropdown-content">
@@ -83,7 +85,7 @@
                 different cultures, traditions and landscapes.
               </p>
             </div>
-            <form class="carousel-form">
+            <form class="carousel-form" id="book-now">
               <input
                 class="me-2 form-control"
                 type="text"
@@ -102,14 +104,14 @@
                 placeholder="DATE"
               />
 
-              <select class="me-2 form-select">
+              <select class="me-2 form-select" id="travel-type">
                 <option value="" disabled selected>Travel Type</option>
                 <option value="adventure">Adventure</option>
                 <option value="Historical">Historical</option>
                 <option value="Wildlife">Wildlife</option>
               </select>
 
-              <button type="submit" class="">Book Now</button>
+              <button type="submit">Book Now</button>
             </form>
           </div>
         </div>
@@ -134,7 +136,7 @@
         </button>
       </div>
     </div>
-<!-- Hero here -->
+    <!-- Hero here -->
     <section class="hero">
       <div class="hero-content">
         <h2>Plan Your Dream Vacation</h2>
@@ -145,7 +147,7 @@
         <a href="#" class="btn btn-dark">Get Started</a>
       </div>
     </section>
-<!-- Features here -->
+    <!-- Features here -->
     <section class="features">
       <div class="feature">
         <img
@@ -181,39 +183,54 @@
         </p>
       </div>
     </section>
-<!-- Blog post here -->
+    <!-- Blog post here -->
     <section class="blog">
       <h2>Latest Blog Posts</h2>
 
       <div class="blog-wrapper">
         <article class="blog-post">
-          <h3 class="blog-title">Post Title 1</h3>
-          <p class="blog-meta">Posted on March 1, 2023</p>
+          <h3 class="blog-title">KHALIYA TOP TREK</h3>
+          <p class="blog-meta">Posted on</p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus
-            purus ac est aliquet, ac facilisis massa venenatis.
+            Khaliya Top Trek in Pithoragarh district of Kumaon region,
+            Uttarakhand. It is a spectacular winter trekking destination. One of
+            the shortest and magnificent Khaliya top packages, Khaliya top trek
+            will take you to some of the most mesmerizing places in Uttarakhand
+            Himalayas.
           </p>
-          <a href="#" class="read-more">Read More</a>
+          <a href="./wholeBlog.html?id=265.00543602337956" class="read-more"
+            >Read More</a
+          >
         </article>
-  
+
         <article class="blog-post">
-          <h3 class="blog-title">Post Title 2</h3>
+          <h3 class="blog-title">Har Ki Dun Trek</h3>
           <p class="blog-meta">Posted on February 15, 2023</p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus
-            purus ac est aliquet, ac facilisis massa venenatis.
+            Located at an altitude of 12,000 ft, Har Ki Dun Trek is one of the
+            most mesmerizing valleys in the Garhwal Himalayas. It is also known
+            by another name i.e., “The Valley of Gods”.The valley is beautifully
+            surrounded by alpine vegetation and is extremely rich in Flora and
+            Fauna.
           </p>
-          <a href="#" class="read-more">Read More</a>
+          <a href="./wholeBlog.html?id=581.1837397430661" class="read-more"
+            >Read More</a
+          >
         </article>
-  
+
         <article class="blog-post">
-          <h3 class="blog-title">Post Title 3</h3>
+          <h3 class="blog-title">TUNGNATH A TEMPLE DEDICATED TO LORD SHIVA</h3>
           <p class="blog-meta">Posted on January 28, 2023</p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus
-            purus ac est aliquet, ac facilisis massa venenatis.
+            Tungnath is one of the five ‘Panch Kedar’ temples dedicated to Lord
+            Shiva; the other four being Madhyamaheshwar, Rudranath, Kalpeshwar
+            with Kedarnath. At an altitude of 3,680 meters (12,073 ft), it is
+            the highest of all the five temples but is also the easiest one to
+            reach.
           </p>
-          <a href="#" class="read-more">Read More</a>
+          <a href="./wholeBlog.html?id=201.75026577382616" class="read-more"
+            >Read More</a
+          >
         </article>
       </div>
     </section>

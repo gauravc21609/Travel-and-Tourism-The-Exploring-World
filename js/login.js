@@ -63,6 +63,7 @@ async function loginUser(email, password) {
     body: JSON.stringify(sendData),
   });
   const data = await res.json();
+
   console.log(data);
   if (data) {
     window.location.href = "../index.html";

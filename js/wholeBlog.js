@@ -13,15 +13,12 @@ async function main() {
   `
 }
 
-
-
 async function getSingleBlog() {
   const url = window.location.href
-  const urlParameter = new URLSearchParams(url)
-  const id = urlParameter.get('id');
+  const id = parseFloat(url.split("=")[1])
 
-  console.log(url);
-  let res = await fetch(`http://localhost:3000/getSingleBlog?id=265.00543602337956`)
+  console.log(id);
+  let res = await fetch(`http://localhost:3000/getSingleBlog?id=${id}`)
   let data = await res.json()
 
 

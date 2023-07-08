@@ -97,3 +97,8 @@ footer {
 center {
   margin-top: 1rem;
 }
+
+.whole-blog {
+  line-height: 24px;
+  word-spacing: 2px;
+}

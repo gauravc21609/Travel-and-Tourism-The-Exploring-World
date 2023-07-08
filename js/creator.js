@@ -15,11 +15,13 @@ document
 
 async function addBlog(date, title, content, location) {
   let sendData = {
-    date: date,
+    date: `${date.getDate()}/${date.getMonth()+1}/${date.getFullYear()}`,
     title: title,
     content: content,
     location: location,
   };
+
+  console.log(sendData.date);
 
   let res = fetch("http://localhost:3000/addblog", {
     method: "POST",
