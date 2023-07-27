@@ -194,9 +194,6 @@
       <center>&copy; 2023 Exploring the World. | All rights reserved.</center>
     </footer>
 
-    <!-- Button trigger modal -->
-    <!-- data-bs-toggle="modal" data-bs-target="#destination4" -->
-
     <!-- Modal -->
     <div
       class="modal fade"
@@ -208,7 +205,9 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="destination1Label">Modal title</h1>
+            <h1 class="modal-title fs-5" id="destination1Label">
+              Enter Booking Details..
+            </h1>
             <button
               type="button"
               class="btn-close"
@@ -216,7 +215,44 @@
               aria-label="Close"
             ></button>
           </div>
-          <div class="modal-body">...</div>
+          <div class="modal-body">
+            <h3>Submit Your Details</h3>
+            <form id="passenger-details">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required />
+
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+
+              <label for="phone">Phone:</label>
+              <input type="tel" id="phone" name="phone" required />
+              <label for="date">Date:</label>
+              <input type="date" id="date" name="date" class="form-control" required />
+
+              <label for="address">Address:</label>
+              <textarea id="address" name="address" required></textarea>
+
+              <label for="boarding-point">Boarding Point</label>
+              <select name="" id="boarding-point" class="me-2 form-select mb-4">
+                <option value="" disabled selected>Boarding</option>
+                <option value="It park">IT Park</option>
+                <option value="Clement Town">Clement town</option>
+                <option value="ISBT Dehradun">ISBT Dehradun</option>
+              </select>
+
+              <select class="me-2 form-select" id="travel-type">
+                <option value="" disabled selected>Travel Type</option>
+                <option value="adventure">Adventure</option>
+                <option value="Historical">Historical</option>
+                <option value="Wildlife">Wildlife</option>
+              </select>
+
+              <div class="d-flex justify-content-between my-3">
+                <label for="pass-count">How many passenger?</label>
+                <input type="number" id="pass-count" placeholder="1" style="width: 50px" />
+              </div>
+            </form>
+          </div>
           <div class="modal-footer">
             <button
               type="button"
@@ -225,7 +261,13 @@
             >
               Close
             </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              id="passenger-details-submit"
+            >
+              Submit
+            </button>
           </div>
         </div>
       </div>
@@ -241,7 +283,9 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="destination2Label">Modal title</h1>
+            <h1 class="modal-title fs-5" id="destination2Label">
+              Enter Booking Details..
+            </h1>
             <button
               type="button"
               class="btn-close"
@@ -274,7 +318,9 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="destination3Label">Modal title</h1>
+            <h1 class="modal-title fs-5" id="destination3Label">
+              Enter Booking Details..
+            </h1>
             <button
               type="button"
               class="btn-close"
@@ -282,7 +328,41 @@
               aria-label="Close"
             ></button>
           </div>
-          <div class="modal-body">...</div>
+          <div class="modal-body"><form id="passenger-details-3">
+              <label for="name3">Name:</label>
+              <input type="text" id="name3" name="name" required />
+
+              <label for="email3">Email:</label>
+              <input type="email" id="email3" name="email" required />
+
+              <label for="phone3">Phone:</label>
+              <input type="tel" id="phone3" name="phone" required />
+              <label for="date3">Date:</label>
+              <input type="date" id="date3" name="date" class="form-control" required />
+
+              <label for="address3">Address:</label>
+              <textarea id="address3" name="address" required></textarea>
+
+              <label for="boarding-point3">Boarding Point</label>
+              <select name="" id="boarding-point3" class="me-2 form-select mb-4">
+                <option value="" disabled selected>Boarding</option>
+                <option value="It park">IT Park</option>
+                <option value="Clement Town">Clement town</option>
+                <option value="ISBT Dehradun">ISBT Dehradun</option>
+              </select>
+
+              <select class="me-2 form-select" id="travel-type-3">
+                <option value="" disabled selected>Travel Type</option>
+                <option value="adventure">Adventure</option>
+                <option value="Historical">Historical</option>
+                <option value="Wildlife">Wildlife</option>
+              </select>
+
+              <div class="d-flex justify-content-between my-3">
+                <label for="pass-count-3">How many passenger?</label>
+                <input type="number" id="pass-count-3" placeholder="1" style="width: 50px" />
+              </div>
+            </form></div>
           <div class="modal-footer">
             <button
               type="button"
@@ -291,7 +371,7 @@
             >
               Close
             </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-primary">Submit</button>
           </div>
         </div>
       </div>
@@ -307,7 +387,9 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="destination4Label">Modal title</h1>
+            <h1 class="modal-title fs-5" id="destination4Label">
+              Enter Booking Details..
+            </h1>
             <button
               type="button"
               class="btn-close"
@@ -315,7 +397,41 @@
               aria-label="Close"
             ></button>
           </div>
-          <div class="modal-body">...</div>
+          <div class="modal-body"><form id="passenger-details-4">
+              <label for="name4">Name:</label>
+              <input type="text" id="name4" name="name" required />
+
+              <label for="email4">Email:</label>
+              <input type="email" id="email4" name="email" required />
+
+              <label for="phone4">Phone:</label>
+              <input type="tel" id="phone4" name="phone" required />
+              <label for="date4">Date:</label>
+              <input type="date" id="date4" name="date" class="form-control" required />
+
+              <label for="address4">Address:</label>
+              <textarea id="address4" name="address" required></textarea>
+
+              <label for="boarding-point-4">Boarding Point</label>
+              <select name="" id="boarding-point-4" class="me-2 form-select mb-4">
+                <option value="" disabled selected>Boarding</option>
+                <option value="It park">IT Park</option>
+                <option value="Clement Town">Clement town</option>
+                <option value="ISBT Dehradun">ISBT Dehradun</option>
+              </select>
+
+              <select class="me-2 form-select" id="travel-type-4">
+                <option value="" disabled selected>Travel Type</option>
+                <option value="adventure">Adventure</option>
+                <option value="Historical">Historical</option>
+                <option value="Wildlife">Wildlife</option>
+              </select>
+
+              <div class="d-flex justify-content-between my-3">
+                <label for="pass-count-4">How many passenger?</label>
+                <input type="number" id="pass-count-4" placeholder="1" style="width: 50px" />
+              </div>
+            </form></div>
           <div class="modal-footer">
             <button
               type="button"
@@ -324,7 +440,7 @@
             >
               Close
             </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-primary">Submit</button>
           </div>
         </div>
       </div>
@@ -340,7 +456,9 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="destination5Label">Modal title</h1>
+            <h1 class="modal-title fs-5" id="destination5Label">
+              Enter Booking Details..
+            </h1>
             <button
               type="button"
               class="btn-close"
@@ -373,7 +491,9 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="destination6Label">Modal title</h1>
+            <h1 class="modal-title fs-5" id="destination6Label">
+              Enter Booking Details..
+            </h1>
             <button
               type="button"
               class="btn-close"
@@ -401,5 +521,7 @@
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
+
+    <script src="./js/destinations.js"></script>
   </body>
 </html>

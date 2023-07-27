@@ -8,9 +8,15 @@ async function main () {
     const trow = document.createElement("tr")
     trow.innerHTML = `
     <th>${idx+1}</th>
+    <td>${item.name}</td>
+    <td>${item.email}</td>
+    <td>${item.phone}</td>
+    <td>${item.address}</td>
+    <td>${item.boarding}</td>
     <td>${item.destination}</td>
-    <td>${item.checkInDate}</td>
-    <td>${item.travelType}</td>
+    <td>${item.count}</td>
+    <td>${item.date}</td>
+    <td>${item.type}</td>
     `
     
     document.querySelector("tbody").append(trow)

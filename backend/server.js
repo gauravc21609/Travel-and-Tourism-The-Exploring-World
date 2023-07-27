@@ -119,14 +119,24 @@ app.get("/getSingleBlog", (req, res) => {
 
 // post reservations or bookings
 app.post("/booking", (req, res) => {
-  const id = Math.random() * 1000;
-  const varId = id.toString();
+  const id = Math.floor(Math.random() * 1000);
 
   console.log(req.body);
 
   db.run(
-    "INSERT INTO bookings (id, destination, checkInDate, travelType) VALUES (?, ?, ?, ?)",
-    [varId, req.body.destination, req.body.checkInDate, req.body.travelType],
+    "INSERT INTO bookings (id, name, email, address, boarding, type, count, phone, destination, date ) VALUES (?, ?, ?, ?, ?,?,?,?,?, ?)",
+    [
+      id,
+      req.body.name,
+      req.body.email,
+      req.body.address,
+      req.body.boarding,
+      req.body.type,
+      req.body.count,
+      req.body.phone,
+      req.body.destination,
+      req.body.date
+    ],
     function (err) {
       if (err) {
         console.error(err);

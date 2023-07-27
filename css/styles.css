@@ -1,6 +1,4 @@
-/* styles.css */
 .booking {
-  /* width: 100vw; */
   padding-top: 80px;
 }
 
@@ -141,8 +139,4 @@
 .read-more:hover {
   background-color: #555;
 }
-
-/*.booking form{
-  margin: 15rem;
-} */
 
