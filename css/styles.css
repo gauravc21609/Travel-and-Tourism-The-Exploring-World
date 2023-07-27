@@ -44,17 +44,6 @@
   font-size: 76px;
 }
 
-.carousel-form {
-  background-color: #fff;
-  padding: 30px 20px;
-  border-radius: 8px;
-  display: flex;
-}
-
-.carousel-form > button {
-  width: 320px;
-}
-
 .img {
   position: absolute;
   display: block;
