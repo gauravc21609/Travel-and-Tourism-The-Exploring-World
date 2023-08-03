@@ -1,5 +1,7 @@
 async function getBlogs() {
-  let res = await fetch("http://localhost:3000/getBlog");
+  let res = await fetch(
+    "https://travel-and-tourism-backend.onrender.com/getBlog"
+  );
   let data = await res.json();
 
   return data;

@@ -10,12 +10,12 @@ document
     let postContent = document.getElementById("post-content").value;
     let postLocation = document.getElementById("post-location").value;
 
-    addBlog(date, postTitle, postContent, postLocation)
+    addBlog(date, postTitle, postContent, postLocation);
   });
 
 async function addBlog(date, title, content, location) {
   let sendData = {
-    date: `${date.getDate()}/${date.getMonth()+1}/${date.getFullYear()}`,
+    date: `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`,
     title: title,
     content: content,
     location: location,
@@ -23,7 +23,7 @@ async function addBlog(date, title, content, location) {
 
   console.log(sendData.date);
 
-  let res = fetch("http://localhost:3000/addblog", {
+  let res = fetch("https://travel-and-tourism-backend.onrender.com/addblog", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

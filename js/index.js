@@ -1,3 +1,24 @@
+// ========================================
+// Index.html
+// ========================================
+
+function mainIndex (){
+  let user = JSON.parse(localStorage.getItem("user"))
+
+  console.log(user);
+  if (user){
+    document.getElementById("user-page").innerText = user.name
+  } else {
+    document.getElementById("user-page").innerHTML = `<i class="fa-solid fa-user"></i>`
+    
+  }
+}
+
+mainIndex()
+
+// ========================================
+// destination.html
+// ========================================
 async function bookDestination(
   name,
   email,
@@ -21,13 +42,16 @@ async function bookDestination(
     date: date,
   };
 
-  let res = await fetch("http://localhost:3000/booking", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(sendData),
-  });
+  let res = await fetch(
+    "https://travel-and-tourism-backend.onrender.com/booking",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(sendData),
+    }
+  );
 
   console.log(await res.json());
 }
@@ -88,7 +112,7 @@ document
     );
   });
 
-  document
+document
   .getElementById("passenger-details-4")
   .addEventListener("click", function (e) {
     // For Tungnath Temple
@@ -115,5 +139,3 @@ document
       date4
     );
   });
-
-  

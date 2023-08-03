@@ -31,6 +31,7 @@ app.post("/newuser", (req, res) => {
   // Generate a random ID
   const { name, password, email } = req.body; // Extract values from the request body
 
+  console.log(req.body);
   // Use parameterized queries to safely insert data
   db.run(
     "INSERT INTO user (id, name, password, email) VALUES (?, ?, ?, ?)",
