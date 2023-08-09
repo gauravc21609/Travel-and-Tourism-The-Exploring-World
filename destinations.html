@@ -79,13 +79,13 @@
         >
           <div class="card text-white">
             <img
-              src="images/destinations/pexels-auris-studio-13682120.jpg"
+              src="images/destinations/pexels-vikas-bhandari-10432964.jpg"
               alt=""
               class="card-img"
             />
 
             <div class="card-img-overlay">
-              <h5 class="card-title">Card title</h5>
+              <h5 class="card-title">Tungnath Temple</h5>
               <p class="card-text">
                 This is a wider card with supporting text below as a natural
                 lead-in to additional content. This content is a little bit
@@ -109,75 +109,6 @@
 
             <div class="card-img-overlay">
               <h5 class="card-title">Rishikesh</h5>
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-              <p class="card-text">Last updated 3 mins ago</p>
-            </div>
-          </div>
-        </div>
-        <div
-          class="col-12 col-md-6 col-lg-4 mb-4 p-2 destination"
-          data-bs-toggle="modal"
-          data-bs-target="#destination4"
-        >
-          <div class="card text-white">
-            <img
-              src="images/destinations/pexels-vikas-bhandari-10432964.jpg"
-              alt=""
-              class="card-img"
-            />
-
-            <div class="card-img-overlay">
-              <h5 class="card-title">Tungnath Temple</h5>
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-              <p class="card-text">Last updated 3 mins ago</p>
-            </div>
-          </div>
-        </div>
-        <div
-          class="col-12 col-md-6 col-lg-4 mb-4 p-2 destination"
-          data-bs-toggle="modal"
-          data-bs-target="#destination5"
-        >
-          <div class="card text-white">
-            <img
-              src="images/destinations/pexels-sanket-barik-7846473.jpg"
-              alt=""
-              class="card-img"
-            />
-
-            <div class="card-img-overlay">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-              <p class="card-text">Last updated 3 mins ago</p>
-            </div>
-          </div>
-        </div>
-        <div
-          class="col-12 col-md-6 col-lg-4 mb-4 p-2 destination"
-          data-bs-toggle="modal"
-          data-bs-target="#destination6"
-        >
-          <div class="card text-white">
-            <img
-              src="images/destinations/pexels-sanket-barik-7846474.jpg"
-              alt=""
-              class="card-img"
-            />
-
-            <div class="card-img-overlay">
-              <h5 class="card-title">Card title</h5>
               <p class="card-text">
                 This is a wider card with supporting text below as a natural
                 lead-in to additional content. This content is a little bit
@@ -277,13 +208,13 @@
       class="modal fade"
       id="destination2"
       tabindex="-1"
-      aria-labelledby="destination2Label"
+      aria-labelledby="destination3Label"
       aria-hidden="true"
     >
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="destination2Label">
+            <h1 class="modal-title fs-5" id="destination3Label">
               Enter Booking Details..
             </h1>
             <button
@@ -293,7 +224,41 @@
               aria-label="Close"
             ></button>
           </div>
-          <div class="modal-body">...</div>
+          <div class="modal-body"><form id="passenger-details-4">
+              <label for="name4">Name:</label>
+              <input type="text" id="name4" name="name" required />
+
+              <label for="email4">Email:</label>
+              <input type="email" id="email4" name="email" required />
+
+              <label for="phone4">Phone:</label>
+              <input type="tel" id="phone4" name="phone" required />
+              <label for="date4">Date:</label>
+              <input type="date" id="date4" name="date" class="form-control" required />
+
+              <label for="address4">Address:</label>
+              <textarea id="address4" name="address" required></textarea>
+
+              <label for="boarding-point4">Boarding Point</label>
+              <select name="" id="boarding-point4" class="me-2 form-select mb-4">
+                <option value="" disabled selected>Boarding</option>
+                <option value="It park">IT Park</option>
+                <option value="Clement Town">Clement town</option>
+                <option value="ISBT Dehradun">ISBT Dehradun</option>
+              </select>
+
+              <select class="me-2 form-select" id="travel-type-4">
+                <option value="" disabled selected>Travel Type</option>
+                <option value="adventure">Adventure</option>
+                <option value="Historical">Historical</option>
+                <option value="Wildlife">Wildlife</option>
+              </select>
+
+              <div class="d-flex justify-content-between my-4">
+                <label for="pass-count-4">How many passenger?</label>
+                <input type="number" id="pass-count-4" placeholder="1" style="width: 50px" />
+              </div>
+            </form></div>
           <div class="modal-footer">
             <button
               type="button"
@@ -302,7 +267,7 @@
             >
               Close
             </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-primary">Submit</button>
           </div>
         </div>
       </div>
@@ -372,145 +337,6 @@
               Close
             </button>
             <button type="button" class="btn btn-primary">Submit</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div
-      class="modal fade"
-      id="destination4"
-      tabindex="-1"
-      aria-labelledby="destination4Label"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="destination4Label">
-              Enter Booking Details..
-            </h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body"><form id="passenger-details-4">
-              <label for="name4">Name:</label>
-              <input type="text" id="name4" name="name" required />
-
-              <label for="email4">Email:</label>
-              <input type="email" id="email4" name="email" required />
-
-              <label for="phone4">Phone:</label>
-              <input type="tel" id="phone4" name="phone" required />
-              <label for="date4">Date:</label>
-              <input type="date" id="date4" name="date" class="form-control" required />
-
-              <label for="address4">Address:</label>
-              <textarea id="address4" name="address" required></textarea>
-
-              <label for="boarding-point-4">Boarding Point</label>
-              <select name="" id="boarding-point-4" class="me-2 form-select mb-4">
-                <option value="" disabled selected>Boarding</option>
-                <option value="It park">IT Park</option>
-                <option value="Clement Town">Clement town</option>
-                <option value="ISBT Dehradun">ISBT Dehradun</option>
-              </select>
-
-              <select class="me-2 form-select" id="travel-type-4">
-                <option value="" disabled selected>Travel Type</option>
-                <option value="adventure">Adventure</option>
-                <option value="Historical">Historical</option>
-                <option value="Wildlife">Wildlife</option>
-              </select>
-
-              <div class="d-flex justify-content-between my-3">
-                <label for="pass-count-4">How many passenger?</label>
-                <input type="number" id="pass-count-4" placeholder="1" style="width: 50px" />
-              </div>
-            </form></div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-            <button type="button" class="btn btn-primary">Submit</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div
-      class="modal fade"
-      id="destination5"
-      tabindex="-1"
-      aria-labelledby="destination5Label"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="destination5Label">
-              Enter Booking Details..
-            </h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">...</div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div
-      class="modal fade"
-      id="destination6"
-      tabindex="-1"
-      aria-labelledby="destination6Label"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="destination6Label">
-              Enter Booking Details..
-            </h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">...</div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
           </div>
         </div>
       </div>
