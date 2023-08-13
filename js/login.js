@@ -1,5 +1,5 @@
 document.getElementById("submit-form").addEventListener("click", function (e) {
-  e.preventDefault();
+  
 
   let nm = document.getElementById("reg-name").value;
   let email = document.getElementById("reg-email").value;
